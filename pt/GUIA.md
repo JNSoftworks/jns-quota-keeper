@@ -94,6 +94,13 @@ Perguntas:
    - **App desktop** — O app do Claude no computador, na aba Code.
    - **Terminal** — O comando `claude` numa janela de terminal ou dentro do editor de código.
    - **Os dois**
+3. **Como você paga o Claude?** — cabeçalho `Plano`
+   - **Pro ou Max** — Assinatura pessoal, com limite de uso por semana.
+   - **Team ou Enterprise** — Plano de empresa; os limites podem ser definidos pela empresa.
+   - **Chave de API** — Paga por uso (por token), sem limite semanal em %.
+   - **Não sei** — Tudo bem: o guia fica no geral e diz, em cada caixa, o que depende do plano.
+
+Nesta pergunta não ponha "(Recomendado)" em nenhuma opção: é um fato sobre a pessoa, não uma escolha.
 
 Passos:
 1. Faça uma cópia de segurança, com a data no nome, de cada arquivo que existir: `<pasta de configuração>/settings.json` → `settings.json.antes-quota-keeper-<AAAA-MM-DD>`, e o CLAUDE.md escolhido → `CLAUDE.md.antes-quota-keeper-<AAAA-MM-DD>`. A data é a de hoje, pelo relógio do computador (por exemplo `2026-11-04`). Cada cópia fica na mesma pasta do original, ao lado dele. Diga à pessoa onde ficaram.
@@ -114,6 +121,7 @@ Passos:
    Se a seção "Quota Keeper" (ou "Economia de tokens", nome antigo) já existir (o guia foi rodado antes), atualize a que existe, nunca crie outra. O mesmo vale para as configurações e os hooks das caixas seguintes: se já estiverem no `settings.json`, atualize, nunca duplique.
 3. Confira se há Python 3 (`python --version` ou `python3 --version`). Os scripts das Caixas 5, 7 e 8 precisam dele. Se não houver, avise que essas partes vão precisar do Python (https://www.python.org/downloads/) e siga com o resto.
 4. Guarde a resposta de "Onde usa": a Caixa 7 depende dela.
+5. Guarde a resposta de "Plano": as Caixas 7 e 8 dependem dela. Nunca suponha o plano, nem pelo que uma ferramenta mostrar. Com "Não sei", fale de forma geral ("se o seu plano tiver limite semanal em %...") e deixe a pessoa decidir. Se ela quiser descobrir, mostre o que a tela de uso diz (no app, a ferramenta `get_usage`; no terminal, `/usage`) e peça que ela confirme; sem a confirmação dela, fica "Não sei".
 
 **Recusas, em todas as caixas:** cada tática respondida "Não" (ou desmarcada) vira uma linha em "Recusadas", com o nome dela, para nenhuma sessão perguntar de novo.
 
@@ -335,6 +343,8 @@ Como mostrar as perguntas (são seis, mas não todas de uma vez):
 - Se a Caixa 1 respondeu "Terminal": não faça as perguntas 1, 2, 5 e 6, que dependem do app. Faça só a 3 e, se a resposta for "Sim, me guie", a 4 numa segunda chamada. A sucessora desse caso é a regra do caminho B; com "Agora não", fica a regra "[Eu abro]".
 - Se respondeu "App desktop" ou "Os dois": primeira chamada com as perguntas 1, 2 e 3. Segunda chamada, se couber alguma: a 4 se a 3 for "Sim, me guie", e a 5 e a 6 se a 1 for "O Claude, sozinho".
 
+Pergunta 3 e o plano (Caixa 1): com "Chave de API", não faça a pergunta 3 (o token é só das assinaturas) e trate como "Agora não"; se a Caixa 1 também respondeu "Terminal", fica a regra "[Eu abro]". Com "Não sei", faça a pergunta e diga que o token só existe nos planos de assinatura (Pro, Max, Team e Enterprise); se o comando do token recusar a conta dela, trate como "Agora não".
+
 Na pergunta 3, ponha "(Recomendado)" em **"Sim, me guie"** se a Caixa 1 respondeu "Terminal", e em **"Agora não"** se respondeu "App desktop" ou "Os dois".
 
 Na pergunta 5, use o modo de permissão visto antes das perguntas. Se for `auto` (modo automático), ponha "(Recomendado)" em **"Liberar e começar no automático"**; se for outro, ou se não deu para ver, em **"Só liberar a tarefa"**.
@@ -487,6 +497,8 @@ Texto da regra (caminho B):
 
 **O que é:** um script que roda sozinho a cada mensagem e a cada ferramenta usada, e avisa o Claude quando a sessão passa de certos limites. O Claude conta à pessoa em uma linha e propõe o que fazer (atualizar a passagem, abrir a sucessora, usar agente mais barato).
 **Por quê:** ninguém percebe a conversa crescendo. No uso do autor, 14 de 36 trocas de sessão só aconteceram depois de 250 mil tokens, até o vigia passar a avisar no meio do turno.
+
+Plano (Caixa 1): com "Chave de API", não faça as perguntas 2 e 3 (não há % semanal; o gasto aparece em dinheiro, no painel da API) e não as ponha em "Recusadas"; o vigia (pergunta 1) serve do mesmo jeito, porque avisa em tokens. Com "Team ou Enterprise" ou "Não sei", faça as duas, mas diga que só funcionam se a tela de uso mostrar um % de limite semanal; se, na hora de ler, não houver nenhum %, pare e avise a pessoa.
 
 Perguntas:
 

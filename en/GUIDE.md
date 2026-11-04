@@ -94,6 +94,13 @@ Questions:
    - **Desktop app** — The Claude app on the computer, in the Code tab.
    - **Terminal** — The `claude` command in a terminal window or inside the code editor.
    - **Both**
+3. **How do you pay for Claude?** — header `Plan`
+   - **Pro or Max** — Personal subscription, with a weekly usage limit.
+   - **Team or Enterprise** — Company plan; the limits may be set by the company.
+   - **API key** — Pay per use (per token), no weekly limit in %.
+   - **I don't know** — That's fine: the guide stays general and says, in each box, what depends on the plan.
+
+Don't put "(Recommended)" on any option in this question: it is a fact about the person, not a choice.
 
 Steps:
 1. Make a backup, with the date in the name, of each file that exists: `<config folder>/settings.json` → `settings.json.before-quota-keeper-<YYYY-MM-DD>`, and the chosen CLAUDE.md → `CLAUDE.md.before-quota-keeper-<YYYY-MM-DD>`. The date is today's, from the computer's clock (for example `2026-11-04`). Each backup stays in the same folder as the original, next to it. Tell the person where they are.
@@ -114,6 +121,7 @@ Steps:
    If the "Quota Keeper" section (or "Token saving", its old name) already exists (the guide was run before), update the existing one, never create another. The same goes for the settings and hooks in the next boxes: if they are already in `settings.json`, update them, never duplicate.
 3. Check that Python 3 is installed (`python --version` or `python3 --version`). The scripts in Boxes 5, 7 and 8 need it. If it isn't, warn that those parts will need Python (https://www.python.org/downloads/) and go on with the rest.
 4. Keep the answer to "Where used": Box 7 depends on it.
+5. Keep the answer to "Plan": Boxes 7 and 8 depend on it. Never assume the plan, not even from what a tool shows. With "I don't know", speak in general terms ("if your plan has a weekly limit in %...") and let the person decide. If they want to find out, show what the usage screen says (in the app, the `get_usage` tool; in the terminal, `/usage`) and ask them to confirm; without their confirmation, it stays "I don't know".
 
 **Declines, in all boxes:** every tactic answered "No" (or unchecked) becomes a line under "Declined", with its name, so that no session asks again.
 
@@ -335,6 +343,8 @@ How to show the questions (there are six, but not all at once):
 - If Box 1 answered "Terminal": don't ask questions 1, 2, 5 and 6, which depend on the app. Ask only 3 and, if the answer is "Yes, guide me", ask 4 in a second call. The successor in this case is the Path B rule; with "Not now", the "[I open it]" rule is used.
 - If it answered "Desktop app" or "Both": first call with questions 1, 2 and 3. Second call, if any of these applies: 4 if 3 is "Yes, guide me", and 5 and 6 if 1 is "Claude, on its own".
 
+Question 3 and the plan (Box 1): with "API key", don't ask question 3 (the token exists only for subscriptions) and treat it as "Not now"; if Box 1 also answered "Terminal", the "[I open it]" rule is used. With "I don't know", ask it and say the token exists only on subscription plans (Pro, Max, Team and Enterprise); if the token command refuses their account, treat it as "Not now".
+
 In question 3, put "(Recommended)" on **"Yes, guide me"** if Box 1 answered "Terminal", and on **"Not now"** if it answered "Desktop app" or "Both".
 
 In question 5, use the permission mode seen before the questions. If it is `auto` (auto mode), put "(Recommended)" on **"Allow and start in auto"**; otherwise, or if it couldn't be seen, on **"Allow the task only"**.
@@ -487,6 +497,8 @@ Rule text (Path B):
 
 **What it is:** a script that runs by itself at every message and every tool used, and warns Claude when the session passes certain limits. Claude tells the person in one line and proposes what to do (update the handoff, open the successor, use a cheaper agent).
 **Why:** nobody notices the conversation growing. In the author's use, 14 of 36 session switches only happened after 250k tokens, until the watch started warning in the middle of the turn.
+
+Plan (Box 1): with "API key", don't ask questions 2 and 3 (there is no weekly %; spending shows up in money, in the API console) and don't put them under "Declined"; the spend watch (question 1) works the same, because it warns in tokens. With "Team or Enterprise" or "I don't know", ask both, but say they only work if the usage screen shows a weekly limit %; if, when reading it, there is no %, stop and tell the person.
 
 Questions:
 
