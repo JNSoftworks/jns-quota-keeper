@@ -14,6 +14,12 @@ Tamanho da conversa ao escrever: <mil tokens> (se não souber, escreva: não med
 - Feito, mas sem conferir: <o quê>
 - Commits / versões publicadas: <ids>
 
+## Rodando na mãe (opcional; apague quando nenhum agente da sessão anterior estiver rodando)
+<!-- Agentes que ainda rodam na sessão anterior na hora da troca. Não relance esse trabalho e não mexa nessas pastas até a sessão anterior dizer que a pasta foi liberada. Leve esta seção adiante até lá. -->
+- Sessão: <título da sessão>
+- <agente> — pasta: <caminho> — faz: <o quê> — deve acabar: <hora>
+- Trabalho nessa pasta que fica para depois da liberação: <...>
+
 ## Próximo passo exato
 <UM item, com arquivo e comando. A sessão nova começa por aqui sem perguntar.>
 

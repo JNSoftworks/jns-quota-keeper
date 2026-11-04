@@ -14,6 +14,12 @@ Conversation size when writing: <thousand tokens> (if you don't know, write: not
 - Done, but not checked: <what>
 - Commits / published versions: <ids>
 
+## Running in the parent (optional; delete it when no agent of the previous session is running)
+<!-- Agents still running in the previous session at the switch. Don't relaunch this work, and don't touch these folders until the previous session says the folder is released. Carry this section forward until then. -->
+- Session: <session title>
+- <agent> — folder: <path> — does: <what> — should end: <time>
+- Work in that folder left for after the release: <...>
+
 ## Exact next step
 <ONE item, with file and command. The new session starts here without asking.>
 
