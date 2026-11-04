@@ -5,6 +5,7 @@
 
 Updated at: <date and time> by <session title>
 Conversation size when writing: <thousand tokens> (if you don't know, write: not measured)
+Previous session: <id of the session that wrote this version; only needed when the successor opens through the manual-only task>
 
 ## Goal of this stage
 <one or two sentences: what counts as done>

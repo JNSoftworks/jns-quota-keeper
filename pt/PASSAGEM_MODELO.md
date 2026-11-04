@@ -5,6 +5,7 @@
 
 Atualizado em: <data e hora> por <título da sessão>
 Tamanho da conversa ao escrever: <mil tokens> (se não souber, escreva: não medido)
+Sessão anterior: <id da sessão que escreveu esta versão; só é preciso quando a sucessora abre pela tarefa só manual>
 
 ## Objetivo desta etapa
 <uma ou duas frases: o que conta como pronto>
