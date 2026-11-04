@@ -4,7 +4,7 @@
 
 A guide and hooks that make Claude Code spend less of your quota. Not a usage monitor: it changes how Claude works, and it runs fine next to any usage tracker. · Um guia e hooks que fazem o Claude Code gastar menos da sua cota. Não é um monitor de uso: ele muda o jeito de o Claude trabalhar e convive com qualquer medidor de consumo.
 
-By / Por **Jaber Neto (JN Softworks)** · v1.0, November 2026 / novembro de 2026
+By / Por **Jaber Felippe Neto (JN Softworks)** · v1.0, November 2026 / novembro de 2026
 
 [English](#english) · [Português](#português)
 
