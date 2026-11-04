@@ -1,6 +1,6 @@
 # Passagem — <projeto> — <etapa>
 
-<!-- Modelo do JN's Quota Keeper (economia de tokens), de Jaber Neto (JN Softworks), CC BY 4.0. -->
+<!-- Modelo do JN's Quota Keeper (economia de tokens), de Jaber Felippe Neto (JN Softworks), CC BY 4.0. -->
 <!-- Reescreva este arquivo a cada atualização; não acrescente no fim. Quando a etapa inteira acabar, escreva ETAPA CONCLUIDA na primeira linha. -->
 
 Atualizado em: <data e hora> por <título da sessão>

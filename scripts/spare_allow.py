@@ -1,7 +1,7 @@
 """Spare allow: a Claude Code PreToolUse hook (matcher "SendMessage|mcp__ccd_session_mgmt__.*") for spare sessions.
 
-Part of JN's Quota Keeper, token-saving tactics by Jaber Neto (JN Softworks).
-Copyright (c) 2026 Jaber Neto (JN Softworks). SPDX-License-Identifier: MIT (full text in the guide's LICENSE.md).
+Part of JN's Quota Keeper, token-saving tactics by Jaber Felippe Neto (JN Softworks).
+Copyright (c) 2026 Jaber Felippe Neto (JN Softworks). SPDX-License-Identifier: MIT (full text in the guide's LICENSE.md).
 
 It approves, without the auto mode classifier, only the session actions used at a switch
 (unarchive, title, model, effort, Remote Control, message) whose target is a spare listed in

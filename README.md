@@ -60,6 +60,6 @@ By / Por **Jaber Felippe Neto (JN Softworks)** · v1.0, November 2026 / novembro
 
 Guides and templates / Guias e modelos: [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/). Scripts: MIT. Details / Detalhes: [`LICENSE.md`](LICENSE.md).
 
-Suggested credit / Crédito sugerido: *JN's Quota Keeper, token-saving tactics by Jaber Neto (JN Softworks), CC BY 4.0.*
+Suggested credit / Crédito sugerido: *JN's Quota Keeper, token-saving tactics by Jaber Felippe Neto (JN Softworks), CC BY 4.0.*
 
 Not affiliated with or endorsed by Anthropic. Claude and Claude Code are trademarks of Anthropic. / Sem vínculo com a Anthropic nem aprovação dela. Claude e Claude Code são marcas da Anthropic.

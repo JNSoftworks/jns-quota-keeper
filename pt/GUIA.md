@@ -1,6 +1,6 @@
 # JN's Quota Keeper — economia de tokens para o Claude Code
 
-> **Feito por Jaber Neto (JN Softworks).** Licença [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/deed.pt-br): pode copiar, adaptar e repassar, desde que mantenha o nome do autor e o link da licença. Os scripts estão sob a licença MIT, que também pede para manter o crédito. Versão 1.0, novembro de 2026.
+> **Feito por Jaber Felippe Neto (JN Softworks).** Licença [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/deed.pt-br): pode copiar, adaptar e repassar, desde que mantenha o nome do autor e o link da licença. Os scripts estão sob a licença MIT, que também pede para manter o crédito. Versão 1.0, novembro de 2026.
 
 Este arquivo é para o Claude. Se você é a pessoa: não precisa ler. O Claude vai mostrar uma caixa de perguntas por tática e só muda o que você aceitar.
 
@@ -107,7 +107,7 @@ Passos:
 2. No fim do CLAUDE.md escolhido (crie se não existir), acrescente a seção abaixo. As caixas seguintes põem as linhas de regra sob "Regras" e as recusas sob "Recusadas".
 
    ```markdown
-   ## Quota Keeper (táticas de Jaber Neto, JN Softworks)
+   ## Quota Keeper (táticas de Jaber Felippe Neto, JN Softworks)
 
    ### Regras
 
@@ -584,4 +584,4 @@ Sem perguntas. Diga à pessoa, em poucas linhas:
 3. O que só vale a partir da próxima sessão (configurações e hooks).
 4. Como desfazer tudo: voltar as cópias de segurança da Caixa 1, apagar os scripts copiados e, se houver, o `<pasta de configuração>/relay_token.txt`.
 5. O que ficou pela metade (por exemplo, a segunda marca da medição do plano). Se o teste do freio ou o do vigia ficou para depois, diga à pessoa para abrir uma sessão nova e pedir ali: "repita o teste do freio (ou do vigia) do guia do Quota Keeper".
-6. O crédito: "Táticas de Jaber Neto (JN Softworks), texto em CC BY 4.0, scripts em MIT." Se a pessoa for repassar o guia, que mande a pasta inteira, com o crédito.
+6. O crédito: "Táticas de Jaber Felippe Neto (JN Softworks), texto em CC BY 4.0, scripts em MIT." Se a pessoa for repassar o guia, que mande a pasta inteira, com o crédito.

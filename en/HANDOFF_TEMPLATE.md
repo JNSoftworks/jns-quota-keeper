@@ -1,6 +1,6 @@
 # Handoff — <project> — <stage>
 
-<!-- Template from JN's Quota Keeper (token saving), by Jaber Neto (JN Softworks), CC BY 4.0. -->
+<!-- Template from JN's Quota Keeper (token saving), by Jaber Felippe Neto (JN Softworks), CC BY 4.0. -->
 <!-- Rewrite this file on every update; don't append to the end. When the whole stage is finished, write STAGE DONE on the first line. -->
 
 Updated at: <date and time> by <session title>

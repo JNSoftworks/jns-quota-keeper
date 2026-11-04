@@ -1,6 +1,6 @@
 # JN's Quota Keeper — License / Licença
 
-Copyright © 2026 Jaber Neto (JN Softworks).
+Copyright © 2026 Jaber Felippe Neto (JN Softworks).
 
 | Part / Parte | License / Licença |
 | --- | --- |
@@ -9,20 +9,20 @@ Copyright © 2026 Jaber Neto (JN Softworks).
 
 ## Guides and templates / Guias e modelos — CC BY 4.0
 
-**EN:** Licensed under the Creative Commons Attribution 4.0 International License. You may share and adapt them for any purpose, including commercially, as long as you credit **Jaber Neto (JN Softworks)**, link to the license, and say whether you made changes.
+**EN:** Licensed under the Creative Commons Attribution 4.0 International License. You may share and adapt them for any purpose, including commercially, as long as you credit **Jaber Felippe Neto (JN Softworks)**, link to the license, and say whether you made changes.
 
-**PT:** Sob a licença Creative Commons Atribuição 4.0 Internacional. Você pode copiar e adaptar para qualquer fim, inclusive comercial, desde que dê o crédito a **Jaber Neto (JN Softworks)**, ponha o link da licença e diga se fez mudanças.
+**PT:** Sob a licença Creative Commons Atribuição 4.0 Internacional. Você pode copiar e adaptar para qualquer fim, inclusive comercial, desde que dê o crédito a **Jaber Felippe Neto (JN Softworks)**, ponha o link da licença e diga se fez mudanças.
 
 License text / Texto da licença: https://creativecommons.org/licenses/by/4.0/legalcode
 
 Suggested credit / Crédito sugerido:
-> JN's Quota Keeper, token-saving tactics by Jaber Neto (JN Softworks), CC BY 4.0. / JN's Quota Keeper, táticas de economia de tokens de Jaber Neto (JN Softworks), CC BY 4.0.
+> JN's Quota Keeper, token-saving tactics by Jaber Felippe Neto (JN Softworks), CC BY 4.0. / JN's Quota Keeper, táticas de economia de tokens de Jaber Felippe Neto (JN Softworks), CC BY 4.0.
 
 ## Scripts — MIT
 
 MIT License
 
-Copyright (c) 2026 Jaber Neto (JN Softworks)
+Copyright (c) 2026 Jaber Felippe Neto (JN Softworks)
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal

@@ -2,7 +2,7 @@
 
 **Token-saving tactics for Claude Code · Táticas de economia de tokens para o Claude Code**
 
-**Made by / Feito por: Jaber Neto (JN Softworks)**
+**Made by / Feito por: Jaber Felippe Neto (JN Softworks)**
 License / Licença: guides [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/), scripts MIT (free to copy and adapt, keeping the credit / livre para copiar e adaptar, mantendo o crédito; see / ver `LICENSE.md`) · v1.0, November 2026 / novembro de 2026
 
 ## For people / Para pessoas

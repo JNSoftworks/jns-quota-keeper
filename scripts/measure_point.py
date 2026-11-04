@@ -1,7 +1,7 @@
 """Measure how many weighted tokens make up 1% of your plan's weekly limit.
 
-Part of JN's Quota Keeper, token-saving tactics by Jaber Neto (JN Softworks).
-Copyright (c) 2026 Jaber Neto (JN Softworks). SPDX-License-Identifier: MIT (full text in the guide's LICENSE.md).
+Part of JN's Quota Keeper, token-saving tactics by Jaber Felippe Neto (JN Softworks).
+Copyright (c) 2026 Jaber Felippe Neto (JN Softworks). SPDX-License-Identifier: MIT (full text in the guide's LICENSE.md).
 
 Usage:
     python measure_point.py <weekly % used now>
