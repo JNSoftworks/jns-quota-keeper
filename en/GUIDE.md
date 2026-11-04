@@ -52,7 +52,7 @@ Explain this to the person in up to 3 sentences before Box 1.
 
 At every step (each time Claude uses a tool and reads the result), it rereads the whole conversation. Almost all of the cost comes from this rereading, not from writing or thinking. What saves tokens is: a short conversation, fewer steps in the main conversation, and heavy work outside it (in an agent, which has its own conversation, or in a script, which costs no tokens).
 
-The author's numbers (Max 20x plan, September to November 2026, measured in the session records):
+The author's numbers (Ultra plan, formerly Max 20x, September to November 2026, measured in the session records):
 - Rereading the conversation was 73% of the cost; storing the conversation to reread it later (the cache) was 19%; writing and thinking, 8%.
 - With the handoff and session-switch rules (Box 6), the main conversation fell from ~12.7 to ~3.2 points of the quota per day of use (75% less).
 - Agents that went past 100 calls were 74% of the agents' cost (Box 5).
@@ -64,7 +64,7 @@ The yardstick used to compare (it is not an official price):
 weight = input × 1 + cache write × 1.25 (5-minute cache) or × 2 (1-hour cache) + cache read × 0.1 + output × 5
 ```
 
-How much 1% of the quota is worth depends on the plan. On the author's Max 20x, 1% of the week was ~8.5 million weight. Don't use this number for another plan: Box 8 measures the person's own.
+How much 1% of the quota is worth depends on the plan. On the author's Ultra plan (formerly Max 20x), 1% of the week was ~8.5 million weight. Don't use this number for another plan: Box 8 measures the person's own.
 
 ## Words to explain to the person
 
@@ -95,7 +95,7 @@ Questions:
    - **Terminal** — The `claude` command in a terminal window or inside the code editor.
    - **Both**
 3. **How do you pay for Claude?** — header `Plan`
-   - **Pro or Max** — Personal subscription, with a weekly usage limit.
+   - **Pro, Max or Ultra** — Personal subscription, with a weekly usage limit.
    - **Team or Enterprise** — Company plan; the limits may be set by the company.
    - **API key** — Pay per use (per token), no weekly limit in %.
    - **I don't know** — That's fine: the guide stays general and says, in each box, what depends on the plan.
@@ -343,7 +343,7 @@ How to show the questions (there are six, but not all at once):
 - If Box 1 answered "Terminal": don't ask questions 1, 2, 5 and 6, which depend on the app. Ask only 3 and, if the answer is "Yes, guide me", ask 4 in a second call. The successor in this case is the Path B rule; with "Not now", the "[I open it]" rule is used.
 - If it answered "Desktop app" or "Both": first call with questions 1, 2 and 3. Second call, if any of these applies: 4 if 3 is "Yes, guide me", and 5 and 6 if 1 is "Claude, on its own".
 
-Question 3 and the plan (Box 1): with "API key", don't ask question 3 (the token exists only for subscriptions) and treat it as "Not now"; if Box 1 also answered "Terminal", the "[I open it]" rule is used. With "I don't know", ask it and say the token exists only on subscription plans (Pro, Max, Team and Enterprise); if the token command refuses their account, treat it as "Not now".
+Question 3 and the plan (Box 1): with "API key", don't ask question 3 (the token exists only for subscriptions) and treat it as "Not now"; if Box 1 also answered "Terminal", the "[I open it]" rule is used. With "I don't know", ask it and say the token exists only on subscription plans (Pro, Max, Ultra, Team and Enterprise); if the token command refuses their account, treat it as "Not now".
 
 In question 3, put "(Recommended)" on **"Yes, guide me"** if Box 1 answered "Terminal", and on **"Not now"** if it answered "Desktop app" or "Both".
 
@@ -419,7 +419,7 @@ Only if question 3 was "Yes, guide me". Go slowly: one step at a time, waiting f
 
 **What the token is** (explain it to the person like this): an access key to their Claude account, valid for one year, made for scripts. Whoever has the token uses their quota. It is like a password.
 
-1. **Check the terminal Claude Code.** Run `claude --version`. If the command doesn't exist, the person needs to install the terminal Claude Code (official instructions at https://code.claude.com/docs). The token works on the Pro, Max, Team and Enterprise plans.
+1. **Check the terminal Claude Code.** Run `claude --version`. If the command doesn't exist, the person needs to install the terminal Claude Code (official instructions at https://code.claude.com/docs). The token works on the Pro, Max, Ultra, Team and Enterprise plans.
 2. **The person generates the token.** You, Claude, don't run this command: it opens the browser and shows the token on screen. Ask them to run, in a separate system terminal window that they open themselves outside this conversation:
 
    ```text

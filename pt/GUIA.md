@@ -52,7 +52,7 @@ Explique isto à pessoa em até 3 frases antes da Caixa 1.
 
 A cada passo (cada vez que o Claude usa uma ferramenta e lê a resposta), ele relê a conversa inteira. Quase todo o gasto vem dessa releitura, não de escrever ou pensar. O que economiza é: conversa curta, menos passos na conversa principal e trabalho pesado fora dela (num agente, que tem conversa própria, ou num script, que não gasta token).
 
-Números do autor (plano Max 20x, setembro a novembro de 2026, medidos nos registros das sessões):
+Números do autor (plano Ultra, antes Max 20x, setembro a novembro de 2026, medidos nos registros das sessões):
 - Reler a conversa foi 73% do gasto; guardar a conversa para reler depois (o cache) foi 19%; escrever e pensar, 8%.
 - Com as regras de passagem e troca de sessão (Caixa 6), a conversa principal caiu de ~12,7 para ~3,2 pontos da cota por dia de uso (75% a menos).
 - Agentes que passaram de 100 chamadas foram 74% do gasto dos agentes (Caixa 5).
@@ -64,7 +64,7 @@ A régua usada para comparar (não é preço oficial):
 peso = entrada × 1 + gravação no cache × 1,25 (cache de 5 min) ou × 2 (cache de 1 hora) + leitura do cache × 0,1 + saída × 5
 ```
 
-Quanto vale 1% da cota depende do plano. No Max 20x do autor, 1% da semana foi ~8,5 milhões de peso. Não use esse número para outro plano: a Caixa 8 mede o da pessoa.
+Quanto vale 1% da cota depende do plano. No plano Ultra do autor (antes Max 20x), 1% da semana foi ~8,5 milhões de peso. Não use esse número para outro plano: a Caixa 8 mede o da pessoa.
 
 ## Palavras para explicar à pessoa
 
@@ -95,7 +95,7 @@ Perguntas:
    - **Terminal** — O comando `claude` numa janela de terminal ou dentro do editor de código.
    - **Os dois**
 3. **Como você paga o Claude?** — cabeçalho `Plano`
-   - **Pro ou Max** — Assinatura pessoal, com limite de uso por semana.
+   - **Pro, Max ou Ultra** — Assinatura pessoal, com limite de uso por semana.
    - **Team ou Enterprise** — Plano de empresa; os limites podem ser definidos pela empresa.
    - **Chave de API** — Paga por uso (por token), sem limite semanal em %.
    - **Não sei** — Tudo bem: o guia fica no geral e diz, em cada caixa, o que depende do plano.
@@ -343,7 +343,7 @@ Como mostrar as perguntas (são seis, mas não todas de uma vez):
 - Se a Caixa 1 respondeu "Terminal": não faça as perguntas 1, 2, 5 e 6, que dependem do app. Faça só a 3 e, se a resposta for "Sim, me guie", a 4 numa segunda chamada. A sucessora desse caso é a regra do caminho B; com "Agora não", fica a regra "[Eu abro]".
 - Se respondeu "App desktop" ou "Os dois": primeira chamada com as perguntas 1, 2 e 3. Segunda chamada, se couber alguma: a 4 se a 3 for "Sim, me guie", e a 5 e a 6 se a 1 for "O Claude, sozinho".
 
-Pergunta 3 e o plano (Caixa 1): com "Chave de API", não faça a pergunta 3 (o token é só das assinaturas) e trate como "Agora não"; se a Caixa 1 também respondeu "Terminal", fica a regra "[Eu abro]". Com "Não sei", faça a pergunta e diga que o token só existe nos planos de assinatura (Pro, Max, Team e Enterprise); se o comando do token recusar a conta dela, trate como "Agora não".
+Pergunta 3 e o plano (Caixa 1): com "Chave de API", não faça a pergunta 3 (o token é só das assinaturas) e trate como "Agora não"; se a Caixa 1 também respondeu "Terminal", fica a regra "[Eu abro]". Com "Não sei", faça a pergunta e diga que o token só existe nos planos de assinatura (Pro, Max, Ultra, Team e Enterprise); se o comando do token recusar a conta dela, trate como "Agora não".
 
 Na pergunta 3, ponha "(Recomendado)" em **"Sim, me guie"** se a Caixa 1 respondeu "Terminal", e em **"Agora não"** se respondeu "App desktop" ou "Os dois".
 
@@ -419,7 +419,7 @@ Só se a pergunta 3 foi "Sim, me guie". Vá devagar: um passo por vez, esperando
 
 **O que é o token** (explique assim à pessoa): uma chave de acesso à conta Claude dela, válida por um ano, feita para scripts. Quem tem o token usa a cota dela. É como uma senha.
 
-1. **Confira o Claude Code de terminal.** Rode `claude --version`. Se o comando não existir, a pessoa precisa instalar o Claude Code de terminal (instruções oficiais em https://code.claude.com/docs). O token funciona nos planos Pro, Max, Team e Enterprise.
+1. **Confira o Claude Code de terminal.** Rode `claude --version`. Se o comando não existir, a pessoa precisa instalar o Claude Code de terminal (instruções oficiais em https://code.claude.com/docs). O token funciona nos planos Pro, Max, Ultra, Team e Enterprise.
 2. **A pessoa gera o token.** Você, Claude, não roda este comando: ele abre o navegador e mostra o token na tela. Peça que ela rode, numa janela de terminal do sistema, separada, aberta por ela fora desta conversa:
 
    ```text
