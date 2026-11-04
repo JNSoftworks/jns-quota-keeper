@@ -1,6 +1,6 @@
 """Spend watch: a Claude Code hook that warns Claude when a session is getting expensive.
 
-Part of Quota Keeper, token-saving tactics by Jaber Neto (JN Softworks).
+Part of JN's Quota Keeper, token-saving tactics by Jaber Neto (JN Softworks).
 Copyright (c) 2026 Jaber Neto (JN Softworks). SPDX-License-Identifier: MIT (full text in the guide's LICENSE.md).
 
 Install it on UserPromptSubmit and PostToolUse. It reads the session transcript (and its

@@ -1,11 +1,10 @@
 # Handoff — <project> — <stage>
 
-<!-- Template from Quota Keeper (token saving), by Jaber Neto (JN Softworks), CC BY 4.0. -->
+<!-- Template from JN's Quota Keeper (token saving), by Jaber Neto (JN Softworks), CC BY 4.0. -->
 <!-- Rewrite this file on every update; don't append to the end. When the whole stage is finished, write STAGE DONE on the first line. -->
 
 Updated at: <date and time> by <session title>
 Conversation size when writing: <thousand tokens> (if you don't know, write: not measured)
-Previous session: <id of the session that wrote this version; only needed when the successor opens through the manual-only task>
 
 ## Goal of this stage
 <one or two sentences: what counts as done>

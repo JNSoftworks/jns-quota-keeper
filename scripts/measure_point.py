@@ -1,6 +1,6 @@
 """Measure how many weighted tokens make up 1% of your plan's weekly limit.
 
-Part of Quota Keeper, token-saving tactics by Jaber Neto (JN Softworks).
+Part of JN's Quota Keeper, token-saving tactics by Jaber Neto (JN Softworks).
 Copyright (c) 2026 Jaber Neto (JN Softworks). SPDX-License-Identifier: MIT (full text in the guide's LICENSE.md).
 
 Usage:

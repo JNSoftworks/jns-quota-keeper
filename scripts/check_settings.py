@@ -1,6 +1,6 @@
 """Check that Claude Code's settings.json is valid JSON with no repeated keys.
 
-Part of Quota Keeper, token-saving tactics by Jaber Neto (JN Softworks).
+Part of JN's Quota Keeper, token-saving tactics by Jaber Neto (JN Softworks).
 Copyright (c) 2026 Jaber Neto (JN Softworks). SPDX-License-Identifier: MIT (full text in the guide's LICENSE.md).
 
 Usage:

@@ -1,4 +1,4 @@
-# Quota Keeper — License / Licença
+# JN's Quota Keeper — License / Licença
 
 Copyright © 2026 Jaber Neto (JN Softworks).
 
@@ -16,7 +16,7 @@ Copyright © 2026 Jaber Neto (JN Softworks).
 License text / Texto da licença: https://creativecommons.org/licenses/by/4.0/legalcode
 
 Suggested credit / Crédito sugerido:
-> Quota Keeper, token-saving tactics by Jaber Neto (JN Softworks), CC BY 4.0. / Quota Keeper, táticas de economia de tokens de Jaber Neto (JN Softworks), CC BY 4.0.
+> JN's Quota Keeper, token-saving tactics by Jaber Neto (JN Softworks), CC BY 4.0. / JN's Quota Keeper, táticas de economia de tokens de Jaber Neto (JN Softworks), CC BY 4.0.
 
 ## Scripts — MIT
 

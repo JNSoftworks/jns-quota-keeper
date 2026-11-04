@@ -1,6 +1,6 @@
 """Session relay: chains Claude Code rounds from the command line, each one with an empty conversation.
 
-Part of Quota Keeper, token-saving tactics by Jaber Neto (JN Softworks).
+Part of JN's Quota Keeper, token-saving tactics by Jaber Neto (JN Softworks).
 Copyright (c) 2026 Jaber Neto (JN Softworks). SPDX-License-Identifier: MIT (full text in the guide's LICENSE.md).
 
 Each round is a new `claude -p` running inside the project folder. It reads the handoff file,

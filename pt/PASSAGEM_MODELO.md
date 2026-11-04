@@ -1,11 +1,10 @@
 # Passagem — <projeto> — <etapa>
 
-<!-- Modelo do Quota Keeper (economia de tokens), de Jaber Neto (JN Softworks), CC BY 4.0. -->
+<!-- Modelo do JN's Quota Keeper (economia de tokens), de Jaber Neto (JN Softworks), CC BY 4.0. -->
 <!-- Reescreva este arquivo a cada atualização; não acrescente no fim. Quando a etapa inteira acabar, escreva ETAPA CONCLUIDA na primeira linha. -->
 
 Atualizado em: <data e hora> por <título da sessão>
 Tamanho da conversa ao escrever: <mil tokens> (se não souber, escreva: não medido)
-Sessão anterior: <id da sessão que escreveu esta versão; só é preciso quando a sucessora abre pela tarefa só manual>
 
 ## Objetivo desta etapa
 <uma ou duas frases: o que conta como pronto>

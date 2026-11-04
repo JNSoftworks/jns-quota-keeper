@@ -1,4 +1,4 @@
-# Quota Keeper
+# JN's Quota Keeper
 
 **Token-saving tactics for Claude Code · Táticas de economia de tokens para o Claude Code**
 

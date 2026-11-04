@@ -1,6 +1,6 @@
 """Agent limit: a Claude Code PreToolUse hook (matcher "Agent|Task") that stops endless agent chains.
 
-Part of Quota Keeper, token-saving tactics by Jaber Neto (JN Softworks).
+Part of JN's Quota Keeper, token-saving tactics by Jaber Neto (JN Softworks).
 Copyright (c) 2026 Jaber Neto (JN Softworks). SPDX-License-Identifier: MIT (full text in the guide's LICENSE.md).
 
 Main conversation = level 0, an agent it opens = level 1, an agent opened by an agent = level 2.
