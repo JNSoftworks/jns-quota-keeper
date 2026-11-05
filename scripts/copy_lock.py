@@ -448,7 +448,7 @@ def selftest():
         case("6 session B opens an agent with the path in the prompt",
              pre("B", tb, "", "Agent", {"prompt": f"Run the test in {copy}"}), "denied")
         case("7 agent of session B runs a script in the copy",
-             pre("B", tb, "x9", "Bash", {"command": bash_copy + "/run.sh -game"}), "denied")
+             pre("B", tb, "x9", "Bash", {"command": bash_copy + "/run.sh --all"}), "denied")
         case("8 session B only reads (git status, cat)",
              pre("B", tb, "", "Bash", {"command": f'git -C "{copy}" status && cat {src_a}'}), "passes")
         case("9 session B edits a .md in the copy",

@@ -52,7 +52,7 @@ Explique isto à pessoa em até 3 frases antes da Caixa 1.
 
 A cada passo (cada vez que o Claude usa uma ferramenta e lê a resposta), ele relê a conversa inteira. Quase todo o gasto vem dessa releitura, não de escrever ou pensar. O que economiza é: conversa curta, menos passos na conversa principal e trabalho pesado fora dela (num agente, que tem conversa própria, ou num script, que não gasta token).
 
-Números do autor (plano Ultra, antes Max 20x, setembro a novembro de 2026, medidos nos registros das sessões):
+Números do autor (setembro a novembro de 2026, medidos nos registros das sessões):
 - Reler a conversa foi 73% do gasto; guardar a conversa para reler depois (o cache) foi 19%; escrever e pensar, 8%.
 - Com as regras de passagem e troca de sessão (Caixa 6), a conversa principal caiu de ~12,7 para ~3,2 pontos da cota por dia de uso (75% a menos).
 - Agentes que passaram de 100 chamadas foram 74% do gasto dos agentes (Caixa 5).
@@ -64,7 +64,7 @@ A régua usada para comparar (não é preço oficial):
 peso = entrada × 1 + gravação no cache × 1,25 (cache de 5 min) ou × 2 (cache de 1 hora) + leitura do cache × 0,1 + saída × 5
 ```
 
-Quanto vale 1% da cota depende do plano. No plano Ultra do autor (antes Max 20x), 1% da semana foi ~8,5 milhões de peso. Não use esse número para outro plano: a Caixa 8 mede o da pessoa.
+Quanto vale 1% da cota depende do plano. No plano do autor, 1% da semana foi ~8,5 milhões de peso. Não use esse número para outro plano: a Caixa 8 mede o da pessoa.
 
 ## Palavras para explicar à pessoa
 

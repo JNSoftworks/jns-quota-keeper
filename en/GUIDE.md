@@ -52,7 +52,7 @@ Explain this to the person in up to 3 sentences before Box 1.
 
 At every step (each time Claude uses a tool and reads the result), it rereads the whole conversation. Almost all of the cost comes from this rereading, not from writing or thinking. What saves tokens is: a short conversation, fewer steps in the main conversation, and heavy work outside it (in an agent, which has its own conversation, or in a script, which costs no tokens).
 
-The author's numbers (Ultra plan, formerly Max 20x, September to November 2026, measured in the session records):
+The author's numbers (September to November 2026, measured in the session records):
 - Rereading the conversation was 73% of the cost; storing the conversation to reread it later (the cache) was 19%; writing and thinking, 8%.
 - With the handoff and session-switch rules (Box 6), the main conversation fell from ~12.7 to ~3.2 points of the quota per day of use (75% less).
 - Agents that went past 100 calls were 74% of the agents' cost (Box 5).
@@ -64,7 +64,7 @@ The yardstick used to compare (it is not an official price):
 weight = input × 1 + cache write × 1.25 (5-minute cache) or × 2 (1-hour cache) + cache read × 0.1 + output × 5
 ```
 
-How much 1% of the quota is worth depends on the plan. On the author's Ultra plan (formerly Max 20x), 1% of the week was ~8.5 million weight. Don't use this number for another plan: Box 8 measures the person's own.
+How much 1% of the quota is worth depends on the plan. On the author's plan, 1% of the week was ~8.5 million weight. Don't use this number for another plan: Box 8 measures the person's own.
 
 ## Words to explain to the person
 
