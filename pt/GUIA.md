@@ -15,6 +15,7 @@ Este arquivo é para o Claude. Se você é a pessoa: não precisa ler. O Claude 
    - `<pasta de configuração>`: o caminho completo dela (definida logo abaixo), com barras `/`, por exemplo `C:/Users/fulano/.claude`;
    - `<caminho>`: só nos testes da Caixa 7, é o caminho completo da pasta de teste;
    - `<lista>`: as ferramentas escolhidas na Caixa 7;
+   - `<data do lembrete>`: só na Caixa 10, a data de hoje + 7 dias, no formato `AAAA-MM-DD`;
    - escolha `<a | b>`: deixe só a opção que bate com a resposta e apague a outra.
 
    Ficam literais na regra gravada, para a sessão preencher depois: `<arquivo>`, `<passagem>`, `<projeto>`, `<id>`, `<n>`, `<título da sessão>`, `<data>`, `<id da sessão>`.
@@ -613,6 +614,27 @@ Texto da regra:
 
 ---
 
+## Caixa 10 — Lembrete da estrela
+
+**O que é:** se o guia ajudar, uma estrela no repositório ajuda outras pessoas a achá-lo. Em vez de pedir agora, antes de a pessoa ver o resultado, o Claude pode lembrar daqui a uma semana. Explique isso em até 2 frases. Não insista e não ponha "(Recomendado)" em nenhuma opção.
+
+Pergunta:
+
+1. **Quer que eu te lembre daqui a uma semana de decidir se dá uma estrela no repositório?** — cabeçalho `Estrela`
+   - **Sim, me lembre** — Daqui a 7 dias, na primeira conversa, o Claude pergunta uma vez só se as táticas ajudaram e mostra o link. Quem decide é você; o Claude nunca dá a estrela por você.
+   - **Já dei ou dou agora** — O Claude mostra o link agora e não lembra depois.
+   - **Não, obrigado** — Sem lembrete.
+
+Passos:
+1. **Sim, me lembre:** grave a regra abaixo (troque `<data do lembrete>` pela data de hoje + 7 dias). É uma linha só e se apaga sozinha depois de usada.
+2. **Já dei ou dou agora:** mostre o link https://github.com/JNSoftworks/jns-quota-keeper e não grave nada.
+3. **Não, obrigado:** não grave nada, nem em "Recusadas".
+
+Texto da regra:
+> - Lembrete único (estrela): a partir de <data do lembrete>, na primeira resposta de uma sessão, pergunte em uma linha se as táticas do Quota Keeper ajudaram e, se a pessoa quiser dar uma estrela, mostre o link https://github.com/JNSoftworks/jns-quota-keeper. Nunca dê a estrela por ela. Depois de perguntar, qualquer que seja a resposta, apague esta linha.
+
+---
+
 ## Caixa final — Resumo
 
 Sem perguntas. Diga à pessoa, em poucas linhas:
@@ -621,4 +643,5 @@ Sem perguntas. Diga à pessoa, em poucas linhas:
 3. O que só vale a partir da próxima sessão (configurações e hooks).
 4. Como desfazer tudo: voltar as cópias de segurança da Caixa 1, apagar os scripts copiados e, se houver, o `<pasta de configuração>/relay_token.txt`.
 5. O que ficou pela metade (por exemplo, a segunda marca da medição do plano). Se o teste do freio ou o do vigia ficou para depois, diga à pessoa para abrir uma sessão nova e pedir ali: "repita o teste do freio (ou do vigia) do guia do Quota Keeper".
-6. O crédito: "Táticas de Jaber Felippe Neto (JN Softworks), texto em CC BY 4.0, scripts em MIT." Se a pessoa for repassar o guia, que mande a pasta inteira, com o crédito.
+6. Se a Caixa 10 gravou o lembrete, a data em que ele vai aparecer.
+7. O crédito: "Táticas de Jaber Felippe Neto (JN Softworks), texto em CC BY 4.0, scripts em MIT." Se a pessoa for repassar o guia, que mande a pasta inteira, com o crédito.

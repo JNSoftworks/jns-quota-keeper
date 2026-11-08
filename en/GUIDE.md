@@ -15,6 +15,7 @@ This file is for Claude. If you are the person: you don't need to read it. Claud
    - `<config folder>`: its full path (defined just below), with `/` slashes, for example `C:/Users/jane/.claude`;
    - `<path>`: only in the Box 7 tests, the full path of the test folder;
    - `<list>`: the tools chosen in Box 7;
+   - `<reminder date>`: only in Box 10, today's date + 7 days, as `YYYY-MM-DD`;
    - a choice `<a | b>`: keep only the option that matches the answer and delete the other.
 
    These stay literal in the saved rule, for the session to fill in later: `<file>`, `<handoff>`, `<project>`, `<id>`, `<n>`, `<session title>`, `<date>`, `<session id>`.
@@ -613,6 +614,27 @@ Rule text:
 
 ---
 
+## Box 10 — Star reminder
+
+**What it is:** if the guide helps, a star on the repository helps other people find it. Instead of asking now, before the person has seen any result, Claude can remind them in a week. Explain this in up to 2 sentences. Don't push, and don't put "(Recommended)" on any option.
+
+Question:
+
+1. **Do you want me to remind you in a week to decide whether to star the repository?** — header `Star`
+   - **Yes, remind me** — In 7 days, in the first conversation, Claude asks just once whether the tactics helped and shows the link. You decide; Claude never stars it for you.
+   - **Already did / doing it now** — Claude shows the link now and doesn't remind you later.
+   - **No, thanks** — No reminder.
+
+Steps:
+1. **Yes, remind me:** save the rule below (replace `<reminder date>` with today's date + 7 days). It's a single line and deletes itself once used.
+2. **Already did / doing it now:** show the link https://github.com/JNSoftworks/jns-quota-keeper and save nothing.
+3. **No, thanks:** save nothing, not even under "Declined".
+
+Rule text:
+> - One-time reminder (star): from <reminder date> on, in the first reply of a session, ask in one line whether the Quota Keeper tactics helped and, if the person wants to star the repository, show the link https://github.com/JNSoftworks/jns-quota-keeper. Never star it for them. After asking, whatever the answer, delete this line.
+
+---
+
 ## Final box — Summary
 
 No questions. Tell the person, in a few lines:
@@ -621,4 +643,5 @@ No questions. Tell the person, in a few lines:
 3. What only applies from the next session (settings and hooks).
 4. How to undo everything: restore the backups from Box 1, delete the copied scripts and, if there is one, `<config folder>/relay_token.txt`.
 5. What was left half done (for example, the second mark of the plan measuring). If the brake test or the spend-watch test was left for later, tell the person to open a new session and say there: "repeat the brake (or spend watch) test from the Quota Keeper guide".
-6. The credit: "Tactics by Jaber Felippe Neto (JN Softworks), text under CC BY 4.0, scripts under MIT." If the person is going to share the guide, they should send the whole folder, with the credit.
+6. If Box 10 saved the reminder, the date it will show up.
+7. The credit: "Tactics by Jaber Felippe Neto (JN Softworks), text under CC BY 4.0, scripts under MIT." If the person is going to share the guide, they should send the whole folder, with the credit.
