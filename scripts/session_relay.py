@@ -20,8 +20,14 @@ the screen or to the log passes through `_hide_token`.
 Permissions: by default `--permission-mode dontAsk` (denies anything not on the list) with
 `--permission-prompts none` and a short tool list (`--tools`). The user's hooks still apply.
 
+Relay log: besides relay.log in the project, every run adds lines to
+<config folder>/quota_keeper/relay_log.jsonl (start, each round's session id, end), with this
+process's PID, the folder, the --reason and whether the person was told (--notified).
+daily_report.py reads it to tell expected screenless sessions from unexpected ones.
+The children also get QUOTA_KEEPER_RELAY=1, so daily_report.py --remind stays quiet inside them.
+
 Usage:
-    python session_relay.py --folder <project> --handoff PASSAGEM.md --model sonnet --rounds 3
+    python session_relay.py --folder <project> --handoff PASSAGEM.md --model sonnet --rounds 3 --reason "finish the stage while I am away" --notified
 """
 
 import argparse
@@ -37,7 +43,9 @@ import tempfile
 import time
 from pathlib import Path
 
-DEFAULT_TOKEN_FILE = Path(os.environ.get("CLAUDE_CONFIG_DIR") or Path.home() / ".claude") / "relay_token.txt"
+CONFIG_DIR = Path(os.environ.get("CLAUDE_CONFIG_DIR") or Path.home() / ".claude")
+DEFAULT_TOKEN_FILE = CONFIG_DIR / "relay_token.txt"
+RELAY_LOG = CONFIG_DIR / "quota_keeper" / "relay_log.jsonl"
 DEFAULT_TOOLS = "Read,Glob,Grep,Edit,Write"
 DONE_MARKS = ("STAGE DONE", "ETAPA CONCLUIDA", "ETAPA CONCLUÍDA")
 KEEP_ENV = {"CLAUDE_CONFIG_DIR", "CLAUDE_CODE_GIT_BASH_PATH"}
@@ -105,12 +113,24 @@ def _child_env(token: str) -> dict:
     env["GCM_INTERACTIVE"] = "never"
     env["GIT_TERMINAL_PROMPT"] = "0"
     env["GH_PROMPT_DISABLED"] = "1"
+    env["QUOTA_KEEPER_RELAY"] = "1"
     return env
 
 
 def _log(log: Path, line: dict) -> None:
     with log.open("a", encoding="utf-8") as fh:
         fh.write(_hide_token(json.dumps(line, ensure_ascii=False)) + "\n")
+
+
+def _registry(line: dict) -> None:
+    # The shared relay log must never stop a relay: any error writing it is ignored.
+    try:
+        RELAY_LOG.parent.mkdir(parents=True, exist_ok=True)
+        line = dict(line, pid=os.getpid())
+        with RELAY_LOG.open("a", encoding="utf-8") as fh:
+            fh.write(_hide_token(json.dumps(line, ensure_ascii=False)) + "\n")
+    except OSError:
+        pass
 
 
 def _now() -> str:
@@ -210,6 +230,8 @@ def run(args) -> int:
     prompt = PROMPT.format(handoff=handoff, tools=args.tools)
     _log(log, {"time": _now(), "event": "start", "folder": str(folder), "handoff": str(handoff), "model": args.model,
                "mode": args.mode, "tools": args.tools, "rounds": args.rounds})
+    _registry({"time": _now(), "event": "start", "folder": str(folder), "model": args.model, "rounds": args.rounds,
+               "reason": args.reason, "notified": args.notified})
 
     reason = "round limit"
     for n in range(1, args.rounds + 1):
@@ -244,6 +266,7 @@ def run(args) -> int:
         if status == "ERROR" and not result:
             line["raw_output"] = ((stdout or "")[-2000:] + "\n" + (stderr or "")[-2000:]).strip()
         _log(log, line)
+        _registry({"time": _now(), "event": "round", "round": n, "status": status, "session": result.get("session_id")})
         print(_hide_token(f"[round {n}] {status} in {seconds} s\n{summary}\n"), flush=True)
 
         if status in ("ERROR", "NO_STATUS"):
@@ -265,6 +288,7 @@ def run(args) -> int:
         except OSError:
             pass
     _log(log, {"time": _now(), "event": "end", "reason": reason})
+    _registry({"time": _now(), "event": "end", "reason": reason})
     print(f"Relay finished: {reason}. Log: {log}")
     return 0 if ("done" in reason or "limit" in reason or "question" in reason) else 1
 
@@ -287,6 +311,10 @@ def main() -> int:
     p.add_argument("--log", help="log file (default: relay.log in the project folder)")
     p.add_argument("--token-file", default=str(DEFAULT_TOKEN_FILE), help="file with the token from claude setup-token")
     p.add_argument("--claude", help="path to the claude executable (default: found in PATH)")
+    p.add_argument("--reason", default="(no reason given)",
+                   help="why this relay runs, in a few words; goes to the relay log read by daily_report.py")
+    p.add_argument("--notified", action="store_true",
+                   help="the person was told before this relay started (recorded in the relay log)")
     return run(p.parse_args())
 
 
