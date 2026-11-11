@@ -1,6 +1,7 @@
 # Passagem — <projeto> — <etapa>
 
 <!-- Modelo do JN's Quota Keeper (economia de tokens), de Jaber Felippe Neto (JN Softworks), CC BY 4.0. -->
+<!-- Criado pelo Claude no primeiro trabalho de várias etapas do projeto. Não escreva senha, token nem dado pessoal aqui. Ao trocar de sessão ou fechar a etapa, acrescente também uma entrada no RESUMOS.md ao lado. -->
 <!-- Reescreva este arquivo a cada atualização; não acrescente no fim. Quando a etapa inteira acabar, escreva ETAPA CONCLUIDA na primeira linha. -->
 
 Atualizado em: <data e hora> por <título da sessão>
@@ -13,6 +14,9 @@ Tamanho da conversa ao escrever: <mil tokens> (se não souber, escreva: não med
 - Feito e conferido: <o quê, e como foi conferido (teste, print, log)>
 - Feito, mas sem conferir: <o quê>
 - Commits / versões publicadas: <ids>
+
+## Passos feitos (anote ao fechar cada parte; apague os antigos quando a lista crescer)
+- <data> — <passo feito, em uma linha>
 
 ## Rodando na mãe (opcional; apague quando nenhum agente da sessão anterior estiver rodando)
 <!-- Agentes que ainda rodam na sessão anterior na hora da troca. Não relance esse trabalho e não mexa nessas pastas até a sessão anterior dizer que a pasta foi liberada. Leve esta seção adiante até lá. -->

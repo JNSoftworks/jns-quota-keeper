@@ -1,6 +1,7 @@
 # Handoff — <project> — <stage>
 
 <!-- Template from JN's Quota Keeper (token saving), by Jaber Felippe Neto (JN Softworks), CC BY 4.0. -->
+<!-- Created by Claude on the project's first multi-stage work. Don't write passwords, tokens or personal data here. At a session switch or end of stage, also append an entry to the SUMMARIES.md next to it. -->
 <!-- Rewrite this file on every update; don't append to the end. When the whole stage is finished, write STAGE DONE on the first line. -->
 
 Updated at: <date and time> by <session title>
@@ -13,6 +14,9 @@ Conversation size when writing: <thousand tokens> (if you don't know, write: not
 - Done and checked: <what, and how it was checked (test, screenshot, log)>
 - Done, but not checked: <what>
 - Commits / published versions: <ids>
+
+## Steps done (note them when each part is finished; delete the old ones when the list grows)
+- <date> — <step done, in one line>
 
 ## Running in the parent (optional; delete it when no agent of the previous session is running)
 <!-- Agents still running in the previous session at the switch. Don't relaunch this work, and don't touch these folders until the previous session says the folder is released. Carry this section forward until then. -->
